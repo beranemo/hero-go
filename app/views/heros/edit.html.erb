@@ -2,12 +2,12 @@
 
 <%= form_for(@hero) do |f| %>
 
-編號：<%= f.label :no %><br/>
-名稱：<%= f.text_field :name %><br/>
-誕生日：<%= f.datetime_select :dob %><br/>
-性別：<%= f.text_field :gender %><br/>
+　編號：<%= f.label :no %><br/>
+　名稱：<%= f.text_field :name %><br/>
+誕生日：<%= f.date_select :dob %><br/>
+　性別：<%= f.text_field :gender %><br/>
 生命值：<%= f.number_field :hp %><br/>
-職業：<%= f.text_field :clss %><br/>
-VIP: <%= f.check_box :vip %><br />
+　職業：<%= f.text_field :clss %><br/>
+　  VIP：<%= f.check_box :vip %><br />
 <%= f.submit 'save' %>
 <% end %>
