@@ -1,0 +1,23 @@
+<h1>Index Page of Heros</h1> 
+<table>
+  <tr>
+    <td>編號</td>
+    <td>名稱</td>
+    <td>誕生日</td>
+    <td>性別</td>
+    <td>生命值</td>
+    <td>職業</td>
+    <td>VIP</td>
+  </tr>
+  <%  @heros.each do |h| %>
+  <tr>
+    <td><%= h.no %></td>
+    <td><%= h.name %></td>
+    <td><%= h.dob %></td>
+    <td><%= h.gender %></td>
+    <td><%= h.hp %></td>
+    <td><%= h.clss %></td>
+    <td><%= h.vip %></td>
+  </tr>
+  <% end %>
+</table>
