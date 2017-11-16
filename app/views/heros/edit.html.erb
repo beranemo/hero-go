@@ -10,7 +10,7 @@
 
 <%= form_for(@hero) do |f| %>
 
-　編號：<%= f.label :no %><br/>
+　編號：<%= f.label :no, @hero.no %><br/>
 　名稱：<%= f.text_field :name %><br/>
 誕生日：<%= f.date_select :dob %><br/>
 　性別：<%= f.radio_button :gender, '男'%>男 
