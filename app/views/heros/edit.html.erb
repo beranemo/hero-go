@@ -1,13 +1,26 @@
-<h1>Edit page</h1>
+<style>
+  .aa {
+    padding: 30px
+  }
+</style> 
+
+<div class="aa">
+<h1>英雄基本資料</h1>
+
 
 <%= form_for(@hero) do |f| %>
 
-　編號：<%= f.label :id %><br/>
+　編號：<%= f.label :no %><br/>
 　名稱：<%= f.text_field :name %><br/>
 誕生日：<%= f.date_select :dob %><br/>
-　性別：<%= f.radio_button :gender, 1, id: 'yellow', for: 'd'  %><br/>
+　性別：<%= f.radio_button :gender, '男'%>男 
+      <%= f.radio_button :gender, '女'%>女 
+      <%= f.radio_button :gender, '其他'%>其他 <br/>
 生命值：<%= f.number_field :hp %><br/>
-　職業：<%= f.text_field :clss %><br/>
+　職業：<%= f.collection_select :hero_code, Character.all, :name, :name %><br/>
 　  VIP：<%= f.check_box :vip %><br />
 <%= f.submit 'save' %>
 <% end %>
+  
+  
+</div>
